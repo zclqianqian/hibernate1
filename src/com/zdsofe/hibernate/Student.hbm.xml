@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+  
+<hibernate-mapping package="com.zdsofe.hibernate">
+  <!-- 定义实体类与数据库之间的映射 -->
+  <class name="Student" table="students">
+	  <!--定义表主键与属性之间的映射关系 -->
+	  <id name="id" column="id">
+		  <!-- 指定主键的生产方式 -->
+		  <generator class="native"></generator>
+	  </id>
+      <!-- 普通属性与表的映射关系,名字相同可以写一个 -->
+      <property name="name" column="name"></property>
+      <property name="sex"></property>
+      <property name="birthday" type="date"></property>
+  </class>
+  
+</hibernate-mapping>    
